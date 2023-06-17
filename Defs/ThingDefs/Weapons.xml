@@ -1,4 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 참고 문서: https://rimworldwiki.com/wiki/Modding_Tutorials/Weapons_Guns -->
 <Defs>
+
+    <!-- BasicGun -->
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>BasicGun</defName>
+        <label>Basic Gun</label>
+        <description>기본 총입니다.</description>
+        <graphicData>
+            <texPath>Things/Weapon/BasicGun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <tradeability>None</tradeability>
+        <soundInteract>Interact_SMG</soundInteract>
+        <generateCommonality>0</generateCommonality>
+        <generateAllowChance>0</generateAllowChance>
+        <weaponClasses>
+            <li>ShortShots</li>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <recipeMaker>
+            <researchPrerequisite>GasOperation</researchPrerequisite>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <WorkToMake>24000</WorkToMake>
+            <Mass>3.5</Mass>
+            <AccuracyTouch>0.70</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.60</AccuracyMedium>
+            <AccuracyLong>0.30</AccuracyLong>
+            <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>75</Steel>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_BasicGun</defaultProjectile>
+                <warmupTime>0.6</warmupTime>
+                <range>27</range>
+                <burstShotCount>4</burstShotCount>
+                <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                <!-- <soundCast>Shot_BasicGun</soundCast> -->
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+        <weaponTags>
+            <li>IndustrialGunAdvanced</li>
+        </weaponTags>
+        <tools>
+            <li>
+                <label>grip</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+            <li>
+                <label>barrel</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>11</power>
+                <cooldownTime>1.5</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_BasicGun</defName>
+        <label>Basic Gun Bullet</label>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>12</damageAmountBase>
+            <speed>60</speed>
+        </projectile>
+    </ThingDef>
+    <!-- end BasicGun -->
 
 </Defs>
