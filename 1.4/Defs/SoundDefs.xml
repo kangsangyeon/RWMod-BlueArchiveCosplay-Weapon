@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-    <!-- BasicGun -->
-    <!-- <SoundDef>
-        <defName>Shot_BasicGun</defName>
-        <context>MapOnly</context>
-        <eventNames />
-        <subSounds>
-            <li>
-                <grains>
-                    <li Class="AudioGrain_Clip">
-                        <clipPath>Shot_BasicGun</clipPath>
-                    </li>
-                </grains>
-                <volumeRange>
-                    <min>39.76471</min>
-                    <max>41.76471</max>
-                </volumeRange>
-                <sustainLoop>False</sustainLoop>
-            </li>
-        </subSounds>
-    </SoundDef> -->
-    <!-- end BasicGun -->
+	
+	<SoundDef>
+		<defName>Makoto_gunshot</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip">
+						<clipPath>Weapon/Ranged/Makoto_shot</clipPath> <!-- 플레이스 홀더 -->
+					</li>
+				</grains>
+				<volumeRange>
+					<min>80</min>
+					<max>90</max>
+				</volumeRange>
+				<pitchRange>
+					<min>0.9082353</min>
+					<max>1.145882</max>
+				</pitchRange>
+				<sustainLoop>False</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
 
 </Defs>
